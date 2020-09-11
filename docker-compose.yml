@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    image: apache-php-app:latest
+    build:
+      context: .
+    restart: always
+    ports:
+      - "57080:80"
+
+    # uncomment to speed up development
+    volumes:
+      - ./app/:/var/www/html/
+    # uncomment to speed up development
