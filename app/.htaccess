@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^auth/v1/?$ API.php?type=1 [NC,L]
+#RewriteCond %{QUERY_STRING} access_token=(\w+)
+#RewriteRule ^auth/v1/view/users/?$ API.php?type=2&access_token=$1 [QSA,NC,L]
+
+</IfModule>
